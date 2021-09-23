@@ -53,7 +53,7 @@ public class Book {
     }
 
     public String toString() {
-        return ("Title: " + title + " Author: " + author + " Year: " + year);
+        return ("\"" + title + "\" by " + author + "(" + year + ")");
     }
 
 }
