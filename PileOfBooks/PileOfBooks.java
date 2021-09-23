@@ -2,7 +2,6 @@ public class PileOfBooks {
     private Book[] pile;
     private int numberOfBooks = 0;
     private final int DEFAULT_CAPACITY = 50;
-    private final int MAX_CAPACITY = 10000;
 
     // constructors
     public PileOfBooks() {
@@ -10,12 +9,7 @@ public class PileOfBooks {
     }
 
     public PileOfBooks(int initialCapacity) {
-        if (initialCapacity > MAX_CAPACITY) {
-            throw new ArrayStoreException("Array size outside allowed bounds");
-        }
-        else {
-            pile = new Book[initialCapacity];
-        }
+        pile = new Book[initialCapacity];
     }
 
     public int getCurrentSize() {
@@ -71,9 +65,6 @@ public class PileOfBooks {
 
     private void doubleCapacity() {
         int doublePileLength = pile.length * 2;
-        if (doublePileLength > MAX_CAPACITY) {
-            throw new ArrayStoreException("Array size outside allowed bounds");
-        }
         Book[] tempArray = new Book[doublePileLength];
         for (int i = 0; i < pile.length; i++) {
             tempArray[i] = pile[i];
