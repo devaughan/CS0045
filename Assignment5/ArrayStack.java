@@ -26,7 +26,7 @@ public final class ArrayStack<T> implements StackInterface<T>
       // The cast is safe because the new array contains null entries
       @SuppressWarnings("unchecked")
       T[] tempStack = (T[])new Object[initialCapacity];
-	  stack = tempStack;
+	   stack = tempStack;
       topIndex = -1;
       integrityOK = true;
    } // end constructor
